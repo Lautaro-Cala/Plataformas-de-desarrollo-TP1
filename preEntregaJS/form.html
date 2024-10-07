@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Crear Lista de Compras</h1>
+    </header>
+    <main>
+        <form id="listaForm">
+            <label for="nombre">Nombre de la Lista:</label>
+            <input type="text" id="nombre" placeholder="Ej: Supermercado" required>
+            
+            <label for="dia">Día de la Semana:</label>
+            <select id="dia" required>
+                <option value="" disabled selected>Selecciona un día</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+
+            <div id="productosContainer">
+                <label>Productos:</label>
+                <div class="producto">
+                    <input type="text" placeholder="Producto" class="producto-nombre" required>
+                    <input type="number" placeholder="Cantidad" class="producto-cantidad" min="1" required>
+                </div>
+            </div>
+            
+            <button type="button" id="agregarProductoBtn">Agregar Producto</button>
+            <button type="submit">Crear Lista</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
