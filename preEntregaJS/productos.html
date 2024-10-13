@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="productosContainer"></div>
+
+    <script>
+        // Obtener el índice de la lista desde la URL
+        const listaIndex = new URLSearchParams(window.location.search).get('listaIndex');
+        
+        // Obtener las listas del localStorage
+        const listas = JSON.parse(localStorage.getItem('listas')) || [];
+        const lista = listas[listaIndex];
+    
+        const productosContainer = document.getElementById('productosContainer');
+        
+        // Mostrar los productos en la página
+        lista.productos.forEach((producto, productoIndex) => {
+            const productoDiv = document.createElement('div');
+            productoDiv.classList.add('producto');
+            productoDiv.innerHTML = `
+                <input type="checkbox" id="producto${productoIndex}" ${producto.completado ? 'checked' : ''}>
+                <label for="producto${productoIndex}">${producto.nombre} (${producto.cantidad})</label>
+            `;
+            
+            // Actualizar el estado del producto en localStorage cuando se selecciona/des-selecciona
+            productoDiv.querySelector('input').addEventListener('change', () => {
+                lista.productos[productoIndex].completado = !lista.productos[productoIndex].completado;
+                localStorage.setItem('listas', JSON.stringify(listas));
+            });
+            
+            productosContainer.appendChild(productoDiv);
+        });
+    </script>
+    
+    
+</body>
+</html>

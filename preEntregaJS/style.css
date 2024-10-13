@@ -31,7 +31,15 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e4e4e4;
+}
+
+.eliminarLista{
+    background-color: red;
+}
+
+.eliminarLista:hover {
+    background-color: rgb(187, 0, 0);
 }
 
 main {
@@ -76,24 +84,100 @@ input, select {
 }
 
 .card {
-    background-color: #007BFF;
-    color: white;
+    background-color: #fff;
+    color: #333;
     padding: 20px;
     margin: 10px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; 
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
 }
 
-.card.completado {
-    background-color: #28a745;
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card h3 {
-    margin: 0;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-align: left;
+    margin: 0 0 10px 0;
 }
 
-.card button {
-    margin-top: 10px;
+.progress-bar-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar-container {
+    width: 85%; 
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px; 
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.product-count {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+
+
+
+
+/* Productos html */
+#productosContainer {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.producto label {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.producto input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #007aff; 
+    cursor: pointer;
+}
+
+.producto:hover {
+    background-color: #f0f0f5;
+}
+
+.producto input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #999;
 }
