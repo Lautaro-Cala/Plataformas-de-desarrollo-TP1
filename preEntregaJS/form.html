@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Lista de Compras</title>
+    <title>Crea tu lista</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Crear Lista de Compras</h1>
+        <h1>Crea tu lista</h1>
     </header>
     <main>
         <form id="listaForm">
@@ -34,9 +34,12 @@
                     <input type="number" placeholder="Cantidad" class="producto-cantidad" min="1" required>
                 </div>
             </div>
-            
-            <button type="button" id="agregarProductoBtn">Agregar Producto</button>
-            <button type="submit">Crear Lista</button>
+
+            <div class="button-container">
+                <button type="button" id="agregarProductoBtn">Agregar Producto</button>
+                <button type="submit">Crear Lista</button>
+                <button type="button" id="volverBtn" onclick="window.location.href='index.html'">Volver</button>
+            </div>
         </form>
     </main>
     <script src="script.js"></script>
