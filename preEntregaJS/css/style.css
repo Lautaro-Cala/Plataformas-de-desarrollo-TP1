@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px; 
+    width: 100%; 
+    max-width: 200px; 
+}
+
+button:hover {
+    background-color: #e4e4e4;
+    color: black; 
+}
+
+.eliminarLista {
+    background-color: red;
+}
+
+.eliminarLista:hover {
+    background-color: rgb(187, 0, 0);
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+label, input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.producto input {
+    width: 45%;
+}
+
+#lista-compras {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px 0; 
+    width: 100%; 
+    padding: 0 10px; 
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 15px; 
+    width: 100%; 
+    max-width: 600px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+.progress-bar-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar-container {
+    width: 85%; 
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px; 
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: green;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.product-count {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Productos html */
+#productosContainer {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; 
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.producto label {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.producto input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #007aff; 
+    cursor: pointer;
+}
+
+.producto:hover {
+    background-color: #f0f0f5;
+}
+
+.producto input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.eliminarProductoBtn {
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    padding: 5px 8px; 
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; 
+    width: 80px; 
+}
+
+.eliminarProductoBtn:hover {
+    background-color: #ff1a1a; 
+}
+
+.eliminarLista {
+    background-color: red; 
+    color: white;
+    border: none;
+    padding: 5px 10px; 
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; 
+}
+
+.eliminarLista:hover {
+    background-color: #ff1a1a;
+}
+
+
+@media (max-width: 320px) {
+    #lista-compras {
+        padding: 0 15px; 
+    }
+
+    .card {
+        padding: 15px; 
+        margin: 10px 0; 
+        max-width: 90%; 
+    }
+
+    .eliminarLista {
+        width: auto; 
+        max-width: none; 
+        margin: 10px auto; 
+    }
+    #productosContainer {
+        padding: 0 15px; 
+        max-width: 90%; 
+    }
+}
